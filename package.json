@@ -4,7 +4,8 @@
   "description": "The ability to generate the front-end of electron.js project using json.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretty": "prettier --write --tab-width 2 \"*.js\""
   },
   "repository": {
     "type": "git",
@@ -32,11 +33,36 @@
     "jquery": "^3.5.1",
     "popper": "^1.0.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test",
+      "pre-push": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run pretty",
+      "git add"
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-docgen": "^0.4.3",
+    "eslint-plugin-jsdoc": "^28.5.1",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-xss": "^0.1.10",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-minify": "^3.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
 }
