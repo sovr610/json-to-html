@@ -1,0 +1,42 @@
+{
+  "name": "json-to-html",
+  "version": "1.0.0",
+  "description": "The ability to generate the front-end of electron.js project using json.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sovr610/json-to-html.git"
+  },
+  "keywords": [
+    "electron",
+    "front",
+    "end",
+    "json",
+    "html",
+    "css",
+    "framework",
+    "frontend",
+    "auto",
+    "generate"
+  ],
+  "author": "Parker Bidigare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sovr610/json-to-html/issues"
+  },
+  "homepage": "https://github.com/sovr610/json-to-html#readme",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "prettier": "^2.0.5"
+  }
+}
